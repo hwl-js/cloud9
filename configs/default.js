@@ -223,7 +223,7 @@ var config = [
         packagePath: "./cloud9.ide.settings",
         settingsPath: ".settings"
     },
-    "./cloud9.ide.shell",
+    // "./cloud9.ide.shell",
     "./cloud9.ide.state",
     "./cloud9.ide.watcher"
 ];
