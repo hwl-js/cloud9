@@ -629,54 +629,54 @@ module.exports = ext.register("ext/console/console", {
 
         ide.addEventListener("socketMessage", this.onMessage.bind(this));
 
-        commands.addCommand({
-            name: "help",
-            hint: "show general help information and a list of available commands",
-            exec: function () {
-                _self.help({tracer_id: _self.command_id_tracer});
-            }
-        });
-        commands.addCommand({
-            name: "newtab",
-            hint: "add a new tab to the CLI",
-            exec: function () {
-                _self.newtab();
-            }
-        });
-        commands.addCommand({
-            name: "clear",
-            hint: "clear all the messages from the console",
-            exec: function () {
-                _self.clear();
-            }
-        });
-        commands.addCommand({
-            name: "switchconsole",
-            bindKey: {mac: "Shift-Esc", win: "Shift-Esc"},
-            hint: "toggle focus between the editor and the command line",
-            exec: function () {
-                _self.switchconsole();
-            }
-        });
-        commands.addCommand({
-            name: "toggleconsole",
-            bindKey: {mac: "Ctrl-Esc", win: "F6"},
-            exec: function () {
-                if (_self.hidden)
-                    _self.show();
-                else
-                    _self.hide();
-            }
-        });
-        commands.addCommand({
-            name: "toggleinputbar",
-            exec: function () {
-                if (_self.hiddenInput)
-                    _self.showInput();
-                else
-                    _self.hideInput();
-            }
-        });
+        // commands.addCommand({
+        //     name: "help",
+        //     hint: "show general help information and a list of available commands",
+        //     exec: function () {
+        //         _self.help({tracer_id: _self.command_id_tracer});
+        //     }
+        // });
+        // commands.addCommand({
+        //     name: "newtab",
+        //     hint: "add a new tab to the CLI",
+        //     exec: function () {
+        //         _self.newtab();
+        //     }
+        // });
+        // commands.addCommand({
+        //     name: "clear",
+        //     hint: "clear all the messages from the console",
+        //     exec: function () {
+        //         _self.clear();
+        //     }
+        // });
+        // commands.addCommand({
+        //     name: "switchconsole",
+        //     bindKey: {mac: "Shift-Esc", win: "Shift-Esc"},
+        //     hint: "toggle focus between the editor and the command line",
+        //     exec: function () {
+        //         _self.switchconsole();
+        //     }
+        // });
+        // commands.addCommand({
+        //     name: "toggleconsole",
+        //     bindKey: {mac: "Ctrl-Esc", win: "F6"},
+        //     exec: function () {
+        //         if (_self.hidden)
+        //             _self.show();
+        //         else
+        //             _self.hide();
+        //     }
+        // });
+        // commands.addCommand({
+        //     name: "toggleinputbar",
+        //     exec: function () {
+        //         if (_self.hiddenInput)
+        //             _self.showInput();
+        //         else
+        //             _self.hideInput();
+        //     }
+        // });
 
         // this.nodes.push(
         //     menus.addItemByPath("Goto/Switch to Command Line", new apf.item({
@@ -698,26 +698,26 @@ module.exports = ext.register("ext/console/console", {
         menus.addItemByPath("Tools/~", new apf.divider(), 30000);
 
         var cmd = {
-            "Git" : [
-                ["Status", "git status"],
-                ["Push", "git push"],
-                ["Pull", "git pull"],
-                ["Stash", "git stash"],
-                ["Commit", "git commit -m ", null, null, true],
-                ["Checkout", "git checkout ", null, null, true]
-            ],
-            "Hg" : [
-                ["Sum", "hg sum"],
-                ["Push", "hg push"],
-                ["Pull", "hg pull"],
-                ["Status", "hg status"],
-                ["Commit", "hg commit -m ", null, null, true],
-                ["Parents", "hg parents ", null, null, true]
-            ],
-            "Npm" : [
-                ["Install", "npm install"],
-                ["Uninstall", "npm uninstall", null, null, true]
-            ]
+            // "Git" : [
+            //     ["Status", "git status"],
+            //     ["Push", "git push"],
+            //     ["Pull", "git pull"],
+            //     ["Stash", "git stash"],
+            //     ["Commit", "git commit -m ", null, null, true],
+            //     ["Checkout", "git checkout ", null, null, true]
+            // ],
+            // "Hg" : [
+            //     ["Sum", "hg sum"],
+            //     ["Push", "hg push"],
+            //     ["Pull", "hg pull"],
+            //     ["Status", "hg status"],
+            //     ["Commit", "hg commit -m ", null, null, true],
+            //     ["Parents", "hg parents ", null, null, true]
+            // ],
+            // "Npm" : [
+            //     ["Install", "npm install"],
+            //     ["Uninstall", "npm uninstall", null, null, true]
+            // ]
         };
 
         var idx = 40000;
@@ -744,7 +744,7 @@ module.exports = ext.register("ext/console/console", {
 
         ide.addEventListener("settings.load", function(e){
             settings.setDefaults("auto/console", [
-                ["autoshow", "true"],
+                ["autoshow", "false"],
                 ["clearonrun", "false"]
             ]);
 
@@ -1094,8 +1094,8 @@ module.exports = ext.register("ext/console/console", {
             txtConsoleInput.focus();
         }
         else {
-            settings.model.setQueryValue("auto/console/@showinput", true);
-            this.hiddenInput = false;
+            settings.model.setQueryValue("auto/console/@showinput", false);
+            this.hiddenInput = true;
         }
 
         var timing = "cubic-bezier(.10, .10, .25, .90)";
