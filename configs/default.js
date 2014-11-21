@@ -99,7 +99,7 @@ var config = [
             "ext/preview/preview",
             // "ext/deploy/deploy",
             //"ext/log/log",
-            "ext/help/help",
+            // "ext/help/help",
             "ext/linereport/linereport",
             "ext/linereport_php/linereport_php",
             "ext/linereport_python/linereport_python",
