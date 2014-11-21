@@ -757,7 +757,7 @@ module.exports = ext.register("ext/console/console", {
             else if (apf.isTrue(e.model.queryValue("auto/console/@expanded")))
                 _self.show(true);
 
-            var showInput = e.model.queryValue("auto/console/@showinput");
+            var showInput = false;//e.model.queryValue("auto/console/@showinput");
             if (showInput === "")
                 _self.showInput(false, true);
             else if (apf.isTrue(showInput))
