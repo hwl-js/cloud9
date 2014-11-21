@@ -270,6 +270,7 @@
             cursor: default;
         }
         .c9-mbar-round {
+            display: none;
             background : url(images/c9-no-repeat.png) no-repeat 0 0;
             height: 37px;
             pointer-events: none;
@@ -11312,7 +11313,7 @@
         .tb_console.tb_textboxInitial .input {
             font-size : 10px;
         }
-        
+
         .tb_console.tb_textboxInitial .ace_cursor{
             display : none;
         }
