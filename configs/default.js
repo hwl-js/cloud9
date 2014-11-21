@@ -172,7 +172,7 @@ var config = [
         secret: "v1234"
     },
     {
-        packagePath: "./connect.session.file",
+        packagePath: "./connect.session.memory",
         sessionsPath: __dirname + "/../.sessions",
         maxAge: 7 * 24 * 60 * 60 * 1000
     },
@@ -204,7 +204,7 @@ var config = [
     "./cloud9.ide.auth",
     "./cloud9.ide.git",
     "./cloud9.ide.gittools",
-    "./cloud9.ide.hg",
+    // "./cloud9.ide.hg",
     "./cloud9.ide.npm",
     "./cloud9.ide.filelist",
     "./cloud9.ide.search",
