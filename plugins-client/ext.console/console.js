@@ -410,7 +410,7 @@ module.exports = ext.register("ext/console/console", {
     createProcessLog: function(message_pid, lang) {
         lang = lang ? lang.replace(/-debug$/, "") : "generic";
         lang = lang[0].toUpperCase() + lang.substring(1);
-        
+
         var command_id = this.createOutputBlock("Running " + lang + " Process", true);
         this.tracerToPidMap[command_id] = message_pid;
         this.pidToTracerMap[message_pid] = command_id;
@@ -678,22 +678,22 @@ module.exports = ext.register("ext/console/console", {
             }
         });
 
-        this.nodes.push(
-            menus.addItemByPath("Goto/Switch to Command Line", new apf.item({
-                command : "switchconsole"
-            }), 350),
-
-            this.mnuItemConsoleExpanded = menus.addItemByPath("View/Console", new apf.item({
-                type    : "check",
-                command : "toggleconsole",
-                checked : "[{require('ext/settings/settings').model}::auto/console/@expanded]"
-            }), 700),
-            this.mnuItemInput = menus.addItemByPath("View/Command Line", new apf.item({
-                type    : "check",
-                command : "toggleinputbar",
-                checked : "[{require('ext/settings/settings').model}::auto/console/@showinput]"
-            }), 800)
-        );
+        // this.nodes.push(
+        //     menus.addItemByPath("Goto/Switch to Command Line", new apf.item({
+        //         command : "switchconsole"
+        //     }), 350),
+        //
+        //     this.mnuItemConsoleExpanded = menus.addItemByPath("View/Console", new apf.item({
+        //         type    : "check",
+        //         command : "toggleconsole",
+        //         checked : "[{require('ext/settings/settings').model}::auto/console/@expanded]"
+        //     }), 700),
+        //     this.mnuItemInput = menus.addItemByPath("View/Command Line", new apf.item({
+        //         type    : "check",
+        //         command : "toggleinputbar",
+        //         checked : "[{require('ext/settings/settings').model}::auto/console/@showinput]"
+        //     }), 800)
+        // );
 
         menus.addItemByPath("Tools/~", new apf.divider(), 30000);
 
