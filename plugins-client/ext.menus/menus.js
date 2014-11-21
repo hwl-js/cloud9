@@ -42,8 +42,8 @@ module.exports = ext.register("ext/menus/menus", {
             this.setRootMenu("Selection", 300),
             this.setRootMenu("Find", 400),
             this.setRootMenu("View", 500),
-            this.setRootMenu("Goto", 600),
-            this.setRootMenu("Tools", 700)
+            this.setRootMenu("Goto", 600)
+            // this.setRootMenu("Tools", 700)
         );
 
         var timer;
