@@ -129,36 +129,36 @@ module.exports = ext.register("ext/dockpanel/dockpanel", {
         });
 
         _self.updateParentHboxTop();
-        ide.addEventListener("menus.restore", _self.updateParentHboxTop);        
+        ide.addEventListener("menus.restore", _self.updateParentHboxTop);
         ide.addEventListener("menus.minimize", _self.updateParentHboxTop);
 
-        this.nodes.push(
-            menus.addItemByPath("View/Dock Panels/", null, 150),
-
-            menus.addItemByPath("View/Dock Panels/Restore Default", new apf.item({
-                onclick : function(){
-                    var defaultSettings = _self.defaultState,//settings.model.queryValue("auto/dockpanel_default/text()"),
-                        state;
-
-                    if (defaultSettings) {
-                        // JSON parse COULD fail
-                        try {
-                            state = defaultSettings;//objSettings.state;
-                        }
-                        catch (ex) {}
-                        _self.layout.loadState(state);
-
-                        settings.model.setQueryValue("auto/dockpanel/text()", state);
-
-                        _self.saveSettings();
-
-                        ide.dispatchEvent("restorelayout");
-                    }
-                }
-            }), 100),
-
-            menus.addItemByPath("View/Dock Panels/~", new apf.divider(), 200)
-        );
+        // this.nodes.push(
+        //     menus.addItemByPath("View/Dock Panels/", null, 150),
+        //
+        //     menus.addItemByPath("View/Dock Panels/Restore Default", new apf.item({
+        //         onclick : function(){
+        //             var defaultSettings = _self.defaultState,//settings.model.queryValue("auto/dockpanel_default/text()"),
+        //                 state;
+        //
+        //             if (defaultSettings) {
+        //                 // JSON parse COULD fail
+        //                 try {
+        //                     state = defaultSettings;//objSettings.state;
+        //                 }
+        //                 catch (ex) {}
+        //                 _self.layout.loadState(state);
+        //
+        //                 settings.model.setQueryValue("auto/dockpanel/text()", state);
+        //
+        //                 _self.saveSettings();
+        //
+        //                 ide.dispatchEvent("restorelayout");
+        //             }
+        //         }
+        //     }), 100),
+        //
+        //     menus.addItemByPath("View/Dock Panels/~", new apf.divider(), 200)
+        // );
     },
 
     updateParentHboxTop : function() {
