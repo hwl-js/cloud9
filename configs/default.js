@@ -94,15 +94,15 @@ var config = [
             "ext/clipboard/clipboard",
             "ext/searchinfiles/searchinfiles",
             "ext/searchreplace/searchreplace",
-            "ext/quickwatch/quickwatch",
+            // "ext/quickwatch/quickwatch", // Watch variable under cursor
             "ext/gotoline/gotoline",
             "ext/preview/preview",
             // "ext/deploy/deploy",
             //"ext/log/log",
             // "ext/help/help",
             "ext/linereport/linereport",
-            "ext/linereport_php/linereport_php",
-            "ext/linereport_python/linereport_python",
+            // "ext/linereport_php/linereport_php",
+            // "ext/linereport_python/linereport_python",
             //"ext/ftp/ftp",
             "ext/code/code",
             "ext/statusbar/statusbar",
@@ -110,10 +110,10 @@ var config = [
             //"ext/preview/preview",
             //"ext/extmgr/extmgr", // Extension manager
             //"ext/run/run", //Add location rule
-            "ext/runpanel/runpanel", //Add location rule
-            "ext/debugger/debugger", //Add location rule
-            "ext/dbg-node/dbg-node",
-            "ext/noderunner/noderunner", //Add location rule
+            // "ext/runpanel/runpanel", //Add location rule
+            // "ext/debugger/debugger", //Add location rule
+            // "ext/dbg-node/dbg-node",
+            // "ext/noderunner/noderunner", //Add location rule
             "ext/console/console",
             "ext/consolehints/consolehints",
             "ext/tabbehaviors/tabbehaviors",
@@ -185,39 +185,39 @@ var config = [
     "./cloud9.process-manager",
     "./cloud9.routes",
     "./cloud9.run.shell",
-    {
-        packagePath: "./cloud9.run.node",
-        listenHint: "Important: in your scripts, use 'process.env.PORT' as port and '0.0.0.0' as host."
-    },
-    {
-        packagePath: "./cloud9.run.node-debug",
-        listenHint: "Important: in your scripts, use 'process.env.PORT' as port and '0.0.0.0' as host.",
-        debugPort: debugPort
-    },
-    "./cloud9.run.npm",
-    "./cloud9.run.npmnode",
-    "./cloud9.run.ruby",
-    "./cloud9.run.python",
-    "./cloud9.run.apache",
-    "./cloud9.run.php",
+    // {
+    //     packagePath: "./cloud9.run.node",
+    //     listenHint: "Important: in your scripts, use 'process.env.PORT' as port and '0.0.0.0' as host."
+    // },
+    // {
+    //     packagePath: "./cloud9.run.node-debug",
+    //     listenHint: "Important: in your scripts, use 'process.env.PORT' as port and '0.0.0.0' as host.",
+    //     debugPort: debugPort
+    // },
+    // "./cloud9.run.npm",
+    // "./cloud9.run.npmnode",
+    // "./cloud9.run.ruby",
+    // "./cloud9.run.python",
+    // "./cloud9.run.apache",
+    // "./cloud9.run.php",
     "architect/plugins/architect.log",
     "./cloud9.ide.auth",
     "./cloud9.ide.git",
     "./cloud9.ide.gittools",
     // "./cloud9.ide.hg",
-    "./cloud9.ide.npm",
+    // "./cloud9.ide.npm",
     "./cloud9.ide.filelist",
     "./cloud9.ide.search",
-    "./cloud9.ide.run-node",
-    {
-        packagePath: "./cloud9.ide.run-npm-module",
-        allowShell: true
-    },
-    "./cloud9.ide.run-python",
-    "./cloud9.ide.run-apache",
-    "./cloud9.ide.run-ruby",
-    "./cloud9.ide.run-php",
-    "./cloud9.run.python",
+    // "./cloud9.ide.run-node",
+    // {
+    //     packagePath: "./cloud9.ide.run-npm-module",
+    //     allowShell: true
+    // },
+    // "./cloud9.ide.run-python",
+    // "./cloud9.ide.run-apache",
+    // "./cloud9.ide.run-ruby",
+    // "./cloud9.ide.run-php",
+    // "./cloud9.run.python",
     "./cloud9.ide.revisions",
     {
         packagePath: "./cloud9.ide.settings",
